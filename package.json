@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-progress-tracker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ProgressTracker component is based on progress-tracker for Vue Bulma",
   "main": "src/index.js",
   "devDependencies": {
