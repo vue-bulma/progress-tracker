@@ -1,8 +1,9 @@
 <template>
-  <li class="progress-step" :class="{ 'is-active': isActived, 'is-complete': isCompleted }">
-    <span class="progress-marker"></span>
-    <span class="progress-text">
-      <h4 class="progress-title"></h4>
+  <li class="progress-step" :class="{ 'is-active': isActive, 'is-complete': isComplete }">
+    <span class="progress-marker">{{ maker }}</span>
+    <span class="progress-text" v-if="title">
+      <h4 class="progress-title">{{ title }}</h4>
+      <slot></slot>
     </span>
   </li>
 </template>
@@ -10,8 +11,25 @@
 <script>
 export default {
   props: {
-    isActived: Boolean,
-    isCompleted: Boolean
+    isActive: Boolean,
+    isComplete: Boolean,
+    marker: {
+      type: String,
+      default: ''
+    },
+    kind: String,
+    title: String
+  },
+
+  created () {
+    this._isStepItem = true
+  },
+
+  computed: {
+    index () {
+      return this.$parent.$stepItems.indexOf(this)
+    }
   }
+
 }
 </script>

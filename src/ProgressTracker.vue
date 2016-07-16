@@ -1,17 +1,23 @@
 <template>
   <ul class="progress-tracker">
+    <slot></slot>
   </ul>
 </template>
 
 <script>
-import StepItem from './StepItem'
-
 export default {
-  components: {
-    StepItem
+  props: {
+    step: Number
+  },
+
+  computed: {
+    $stepItems () {
+      return this.$children.filter(child => child._isStepItem)
+    }
   }
 }
 </script>
 
 <style lang="scss">
+@import "~progress-tracker/app/styles/progress-tracker";
 </style>
