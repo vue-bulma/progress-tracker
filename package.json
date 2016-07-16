@@ -23,6 +23,6 @@
   "author": "Fangdun Cai <cfddream@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "progress-tracker": "1.0.0"
+    "progress-tracker": "github:nigelotoole/progress-tracker"
   }
 }

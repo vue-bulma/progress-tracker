@@ -1,6 +1,6 @@
 <template>
   <li class="progress-step" :class="{ 'is-active': isActive, 'is-complete': isComplete }">
-    <span class="progress-marker">{{ maker }}</span>
+    <span class="progress-marker">{{ marker }}</span>
     <span class="progress-text" v-if="title">
       <h4 class="progress-title">{{ title }}</h4>
       <slot></slot>

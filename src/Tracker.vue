@@ -1,5 +1,12 @@
 <template>
-  <ul class="progress-tracker">
+  <ul :class="{
+    'progress-tracker': true,
+    [`progress-tracker--${alignment}`]: alignment,
+    'progress-tracker--border': border,
+    'progress-tracker--spaced': spaced,
+    'progress-tracker--word': word,
+    [`progress-tracker--word-${textAlign}`]: textAlign
+  }">
     <slot></slot>
   </ul>
 </template>
@@ -7,7 +14,12 @@
 <script>
 export default {
   props: {
-    step: Number
+    alignment: String,
+    step: Number,
+    border: Boolean,
+    spaced: Boolean,
+    word: Boolean,
+    textAlign: String
   },
 
   computed: {
@@ -19,5 +31,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~bulma/sass/utilities/variables';
 @import "~progress-tracker/app/styles/progress-tracker";
 </style>
