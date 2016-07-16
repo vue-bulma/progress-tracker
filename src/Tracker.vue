@@ -5,7 +5,8 @@
     'progress-tracker--border': border,
     'progress-tracker--spaced': spaced,
     'progress-tracker--word': word,
-    [`progress-tracker--word-${textAlign}`]: textAlign
+    [`progress-tracker--word-${textAlign}`]: wordAlign,
+    'progress-tracker--text': text
   }">
     <slot></slot>
   </ul>
@@ -19,7 +20,8 @@ export default {
     border: Boolean,
     spaced: Boolean,
     word: Boolean,
-    textAlign: String
+    wordAlign: String,
+    text: Boolean
   },
 
   computed: {
@@ -32,5 +34,9 @@ export default {
 
 <style lang="scss">
 @import '~bulma/sass/utilities/variables';
-@import "~progress-tracker/app/styles/progress-tracker";
+@import "~progress-tracker/app/styles/progress-tracker.scss";
+
+.progress-step:not(:last-child)::after {
+  z-index: 0;
+}
 </style>
