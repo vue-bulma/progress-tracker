@@ -2,7 +2,7 @@
   <li class="progress-step" :class="{ 'is-active': isActive, 'is-complete': isComplete }">
     <span class="progress-marker">{{ marker }}</span>
     <span class="progress-text" v-if="title">
-      <h4 class="progress-title">{{ title }}</h4>
+      <h4 class="progress-title">{{ title }}</h4>{{ text }}
       <slot></slot>
     </span>
   </li>
@@ -18,7 +18,8 @@ export default {
       default: ''
     },
     kind: String,
-    title: String
+    title: String,
+    text: String
   },
 
   created () {
