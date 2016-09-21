@@ -21,7 +21,8 @@ export default {
     spaced: Boolean,
     word: Boolean,
     wordAlign: String,
-    text: Boolean
+    text: Boolean,
+    textAlign: String
   },
 
   computed: {
