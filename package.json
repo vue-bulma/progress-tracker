@@ -1,14 +1,14 @@
 {
   "name": "vue-bulma-progress-tracker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ProgressTracker component is based on progress-tracker for Vue Bulma",
-  "main": "src/index.js",
-  "peerDependencies": {
-    "bulma": "^0.2",
-    "vue": ">=2.0.0-beta.0"
+  "repository": "vue-bulma/progress-tracker",
+  "license": "MIT",
+  "author": {
+    "name": "Fangdun Cai",
+    "email": "cfddream@gmail.com",
+    "url": "fundon.me"
   },
-  "scripts": {},
-  "repository": "git+https://github.com/vue-bulma/progress-tracker.git",
   "keywords": [
     "vue",
     "bulma",
@@ -20,9 +20,12 @@
     "timeline",
     "tracker"
   ],
-  "author": "Fangdun Cai <cfddream@gmail.com>",
-  "license": "MIT",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "bulma": ">=0.2",
+    "vue": ">=2"
+  },
   "dependencies": {
-    "progress-tracker": "github:nigelotoole/progress-tracker"
+    "progress-tracker": "1.2.0"
   }
 }
